@@ -7,13 +7,28 @@ import Foundation
 
 // INPUT
 // Collect and filter user input here
+var expectedLines = 0
+while 1 == 1 {
+    print("How many lines?")
+    guard let validLines = readLine()else {
+        continue
+    }
+    guard let integerLine = Int(validLines)else {
+        continue
+    }
+    if integerLine < 0 || integerLine > 10000 {
+        continue
+    }
+    expectedLines = integerLine
+    break
+}
 
 // PROCESS
 // Implement the primary logic of the problem here
 // Some output may be given here if you desire
 
 // Example of how to collect multiple input lines
-let expectedLines = 4
+
 print("Please enter the \(expectedLines) of text:")
 for _ in 1...expectedLines {
     
@@ -24,9 +39,9 @@ for _ in 1...expectedLines {
         continue
     }
     
-    // Now we have the line, we can print it out, analyze it as needed, et cetera
-    print(givenLine)
+    var arrayOfAnswer : [String] = []
     
+        
 }
 
 // OUTPUT
